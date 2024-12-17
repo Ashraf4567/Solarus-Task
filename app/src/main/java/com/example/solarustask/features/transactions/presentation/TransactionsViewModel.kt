@@ -3,7 +3,7 @@ package com.example.solarustask.features.transactions.presentation
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.solarustask.core.networking.Resource
+import com.example.solarustask.core.data.networking.Resource
 import com.example.solarustask.features.transactions.domain.TransactionsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch

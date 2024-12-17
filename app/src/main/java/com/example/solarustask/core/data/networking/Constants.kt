@@ -1,4 +1,4 @@
-package com.example.solarustask.core
+package com.example.solarustask.core.data.networking
 
 class Constants {
 

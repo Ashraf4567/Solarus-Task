@@ -1,4 +1,4 @@
-package com.example.solarustask.core.networking
+package com.example.solarustask.core.data.networking
 
 import com.google.gson.JsonSyntaxException
 import kotlinx.coroutines.Dispatchers

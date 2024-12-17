@@ -1,7 +1,7 @@
 package com.example.solarustask.di
 
 import android.util.Log
-import com.example.solarustask.core.Constants.Companion.BASE_URL
+import com.example.solarustask.core.data.networking.Constants.Companion.BASE_URL
 import com.example.solarustask.features.transactions.data.WebServices
 import dagger.Module
 import dagger.Provides

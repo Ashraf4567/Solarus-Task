@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Solarus Task</string>
+    <string name="home">الرئيسية</string>
+    <string name="transactions">معاملاتي</string>
+    <string name="my_companies">شركاتي</string>
+    <string name="policy">السياسات</string>
 </resources>

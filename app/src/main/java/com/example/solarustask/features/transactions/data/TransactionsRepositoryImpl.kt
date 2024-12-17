@@ -1,7 +1,7 @@
 package com.example.solarustask.features.transactions.data
 
-import com.example.solarustask.core.networking.Resource
-import com.example.solarustask.core.networking.safeApiCall
+import com.example.solarustask.core.data.networking.Resource
+import com.example.solarustask.core.data.networking.safeApiCall
 import com.example.solarustask.features.transactions.data.mappers.toDomain
 import com.example.solarustask.features.transactions.domain.Transactions
 import com.example.solarustask.features.transactions.domain.TransactionsRepository
