@@ -1,7 +1,6 @@
-# Project Documentation
+# Task Documentation
 
 ## Overview
-This project demonstrates the implementation of a modern Android application using the following technologies and principles:
 - **Retrofit**: For network communication.
 - **Hilt**: For dependency injection.
 - **Clean Architecture**: To ensure a clear separation of concerns and scalable code structure.
