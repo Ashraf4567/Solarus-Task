@@ -30,26 +30,26 @@ val Typography = Typography(
     bodySmall = TextStyle(
         fontFamily = almarai,
         fontWeight = FontWeight.Normal,
-        fontSize = 12.sp,
+        fontSize = 13.sp,
     ),
     bodyMedium = TextStyle(
         fontFamily = almarai,
         fontWeight = FontWeight.Normal,
-        fontSize = 14.sp,
+        fontSize = 15.sp,
     ),
     bodyLarge = TextStyle(
         fontFamily = almarai,
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
+        fontSize = 17.sp,
     ),
     labelMedium = TextStyle(
         fontFamily = almarai,
         fontWeight = FontWeight.Normal,
-        fontSize = 14.sp,
+        fontSize = 15.sp,
     ),
     titleLarge = TextStyle(
         fontFamily = almarai,
         fontWeight = FontWeight.ExtraBold,
-        fontSize = 16.sp,
+        fontSize = 17.sp,
     )
 )

@@ -55,7 +55,7 @@ fun TransactionCard(
         Column(
             modifier = Modifier
                 .wrapContentHeight()
-                .padding(14.dp),
+                .padding(horizontal = 14.dp , vertical = 16.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             IconText(
