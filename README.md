@@ -81,3 +81,7 @@ The project follows a modular structure based on Clean Architecture principles, 
         - Example: `TransactionsViewModel` depends on `TransactionsRepository` rather than `TransactionsRepositoryImpl`.
 
 
+
+
+https://github.com/user-attachments/assets/862625fa-afde-477e-8d2d-11fb09ffb219
+
