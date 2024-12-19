@@ -6,8 +6,7 @@ import com.example.solarustask.features.transactions.domain.Transaction
 import com.example.solarustask.features.transactions.domain.Transactions
 
 
-fun TransactionDto.toTransaction()
-= Transaction(
+fun TransactionDto.toTransaction() = Transaction(
     price = price ?: 0.0,
     location = location ?: "",
     timestamp = timestamp ?: ""

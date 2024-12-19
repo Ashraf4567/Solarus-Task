@@ -19,7 +19,7 @@ fun IconText(
     modifier: Modifier = Modifier,
     icon: Int,
     text: String,
-    textStyle: TextStyle = MaterialTheme.typography.bodySmall.copy(color = Color(0xFF6A6D7E)),
+    textStyle: TextStyle = MaterialTheme.typography.bodyMedium.copy(color = Color(0xFF6A6D7E)),
     iconTint: Color = Color(0xFF6A6D7E)
 ) {
     Row(

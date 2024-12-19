@@ -1,7 +1,7 @@
 package com.example.solarustask.features.transactions.presentation.model
 
-import com.example.solarustask.core.presentation.util.formatDateToArabic
-import com.example.solarustask.core.presentation.util.formatTimeToArabic
+
+import com.example.solarustask.core.presentation.util.formatDateAndTime
 import com.example.solarustask.features.transactions.domain.Transaction
 
 data class TransactionUi(
@@ -14,6 +14,6 @@ data class TransactionUi(
 fun Transaction.toUi(): TransactionUi = TransactionUi(
     price = price,
     location = location,
-    date = formatDateToArabic(timestamp),
-    time = formatTimeToArabic(timestamp)
+    date = formatDateAndTime(timestamp).first,
+    time = formatDateAndTime(timestamp).second
 )

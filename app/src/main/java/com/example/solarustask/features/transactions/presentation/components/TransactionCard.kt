@@ -62,7 +62,7 @@ fun TransactionCard(
                 icon = R.drawable.ic_egp,
                 text = "${transaction.price}  ج.م",
                 iconTint = MaterialTheme.colorScheme.secondary,
-                textStyle = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold , color = Color.Black)
+                textStyle = MaterialTheme.typography.titleLarge.copy(color = Color.Black)
             )
             IconText(
                 icon = R.drawable.ic_location,

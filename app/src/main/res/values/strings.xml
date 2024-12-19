@@ -4,4 +4,5 @@
     <string name="transactions">معاملاتي</string>
     <string name="my_companies">شركاتي</string>
     <string name="policy">السياسات</string>
+    <string name="num_of_transactions">عدد المعاملات الكلي</string>
 </resources>

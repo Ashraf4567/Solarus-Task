@@ -9,16 +9,15 @@ import retrofit2.HttpException
 import java.io.IOException
 import java.util.concurrent.TimeoutException
 
-suspend fun <T> safeApiCall(apiCall: suspend () -> T): Flow<Resource<T>> = flow {
+fun <T> safeApiCall(apiCall: suspend () -> T): Flow<Resource<T>> = flow {
     emit(Resource.Loading())
     try {
-        val result = apiCall()
+        val result = apiCall.invoke()
         emit(Resource.Success(result))
     } catch (e: Exception) {
         emit(handleException(e))
     }
-}
-    .flowOn(Dispatchers.IO)
+}.flowOn(Dispatchers.IO)
 
 private fun <T> handleException(exception: Exception): Resource<T> {
     return when (exception) {
@@ -37,7 +36,9 @@ private fun <T> handleException(exception: Exception): Resource<T> {
                 )
             )
         }
-        is JsonSyntaxException -> Resource.Error(Exception("Data parsing error"))
+        is JsonSyntaxException -> {
+            Resource.Error(Exception("Data parsing error"))
+        }
         else -> Resource.Error(Exception("Unexpected error occurred"))
     }
 }

@@ -26,20 +26,26 @@ class ApiModule {
     }
 
     @Provides
-    fun provideOkHttpClient(): OkHttpClient{
+    fun provideOkHttpClient(loggingInterceptor: HttpLoggingInterceptor): OkHttpClient{
         return OkHttpClient.Builder()
-            .addInterceptor(provideLoggingInterceptor())
+            .addInterceptor(loggingInterceptor)
             .build()
     }
 
     @Provides
     fun provideGsonConvertorFactory(): GsonConverterFactory {
-        return GsonConverterFactory.create()
+        return GsonConverterFactory.create(
+            com.google.gson.GsonBuilder()
+                .setLenient()
+                .create()
+        )
     }
 
     @Provides
-    fun provideRetrofit(client: OkHttpClient,
-                        converter:GsonConverterFactory): Retrofit {
+    fun provideRetrofit(
+        client: OkHttpClient,
+        converter: GsonConverterFactory
+    ): Retrofit {
         return Retrofit.Builder()
             .client(client)
             .baseUrl(BASE_URL)

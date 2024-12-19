@@ -1,27 +1,28 @@
 package com.example.solarustask.core.presentation.util
 
-import java.time.ZonedDateTime
-import java.time.format.DateTimeFormatter
+import android.annotation.SuppressLint
+import java.text.SimpleDateFormat
 import java.util.Locale
+import java.util.TimeZone
 
-fun formatDateToArabic(timestamp: String): String {
-    val formatter = DateTimeFormatter.ISO_DATE_TIME
-    val dateTime = ZonedDateTime.parse(timestamp, formatter)
+@SuppressLint("SimpleDateFormat")
+fun formatDateAndTime(timestamp: String): Pair<String, String> {
+    try {
+        val inputFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSSSS", Locale.getDefault())
+        inputFormat.timeZone = TimeZone.getTimeZone("UTC")
+        val date = inputFormat.parse(timestamp)
 
-    val arabicLocale = Locale("ar") // we can use any locale we want
+        val dateFormat = SimpleDateFormat("dd / MM / yyyy")
+        val formattedDate = dateFormat.format(date)
 
-    val dateFormatter = DateTimeFormatter.ofPattern("d MMM yyyy", arabicLocale)
+        val timeFormat = SimpleDateFormat("hh:mm a")
+        val formattedTime = timeFormat.format(date)
+            .replace("AM", "صباحاً")
+            .replace("PM", "مساءً")
 
-    return dateTime.format(dateFormatter)
-}
+        return Pair(formattedDate, formattedTime)
 
-fun formatTimeToArabic(timestamp: String): String {
-    val formatter = DateTimeFormatter.ISO_DATE_TIME
-    val dateTime = ZonedDateTime.parse(timestamp, formatter)
-
-    val arabicLocale = Locale("ar")
-
-    val timeFormatter = DateTimeFormatter.ofPattern("h:mm a", arabicLocale)
-
-    return dateTime.format(timeFormatter)
+    } catch (e: Exception) {
+        return Pair("", "")
+    }
 }
