@@ -1,3 +1,8 @@
+https://github.com/user-attachments/assets/53050ac4-e428-441f-b800-6d8cc367ec73
+
+
+
+
 # Task Documentation
 
 ## Overview
@@ -83,11 +88,5 @@ The project follows a modular structure based on Clean Architecture principles, 
         - Example: `TransactionsViewModel` depends on `TransactionsRepository` rather than `TransactionsRepositoryImpl`.
 
 
-
-
-
-
-
-https://github.com/user-attachments/assets/53050ac4-e428-441f-b800-6d8cc367ec73
 
 
