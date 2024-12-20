@@ -39,6 +39,9 @@ The project follows a modular structure based on Clean Architecture principles, 
 ##### `data`
 - **`mappers`**
     - **`TransactionsMapper.kt`**: Maps DTOs to domain models.
+    - - **`offline`**
+    - **`TransactionsDao.kt`**: Room Dao for making database operations on it.
+    - - **`TransactionsEntity.kt`**: entity in Room db.
 - **`TransactionDto.kt`**: Data Transfer Object for transactions.
 - **`TransactionsRepositoryImpl.kt`**: Repository implementation for handling data operations.
 - **`TransactionsResponse.kt`**: Model for the API response.
