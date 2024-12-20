@@ -1,7 +1,6 @@
-# Project Documentation
+# Task Documentation
 
 ## Overview
-This project demonstrates the implementation of a modern Android application using the following technologies and principles:
 - **Retrofit**: For network communication.
 - **Hilt**: For dependency injection.
 - **Clean Architecture**: To ensure a clear separation of concerns and scalable code structure.
@@ -80,4 +79,8 @@ The project follows a modular structure based on Clean Architecture principles, 
     - **Dependency Inversion Principle (DIP)**: High-level modules depend on abstractions rather than concrete implementations.
         - Example: `TransactionsViewModel` depends on `TransactionsRepository` rather than `TransactionsRepositoryImpl`.
 
+
+
+
+https://github.com/user-attachments/assets/862625fa-afde-477e-8d2d-11fb09ffb219
 
