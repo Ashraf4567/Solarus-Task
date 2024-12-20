@@ -2,11 +2,23 @@ package com.example.solarustask.features.transactions.data.mappers
 
 import com.example.solarustask.features.transactions.data.TransactionDto
 import com.example.solarustask.features.transactions.data.TransactionsResponse
+import com.example.solarustask.features.transactions.data.offline.TransactionEntity
 import com.example.solarustask.features.transactions.domain.Transaction
 import com.example.solarustask.features.transactions.domain.Transactions
 
 
 fun TransactionDto.toTransaction() = Transaction(
+    price = price ?: 0.0,
+    location = location ?: "",
+    timestamp = timestamp ?: ""
+)
+fun TransactionDto.toEntity() = TransactionEntity(
+    price = price ?: 0.0,
+    location = location ?: "",
+    timestamp = timestamp ?: ""
+)
+
+fun TransactionEntity.toDomain() = Transaction(
     price = price ?: 0.0,
     location = location ?: "",
     timestamp = timestamp ?: ""
