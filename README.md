@@ -30,7 +30,7 @@ The project follows a modular structure based on Clean Architecture principles, 
 - **`navigation`**
     - **`BottomNavItem.kt`**: Defines items for bottom navigation.
     - **`NavGraph.kt`**: Navigation graph for managing app routes.
-    - **`Screens.kt`**: Enum class for screen identifiers.
+    - **`Screens.kt`**: seald class for screens routs.
 
 #### `util`
 - **`FormatTimestamp.kt`**: Utility class to format timestamps.
@@ -44,9 +44,9 @@ The project follows a modular structure based on Clean Architecture principles, 
 ##### `data`
 - **`mappers`**
     - **`TransactionsMapper.kt`**: Maps DTOs to domain models.
-    - - **`offline`**
-    - **`TransactionsDao.kt`**: Room Dao for making database operations on it.
-    - - **`TransactionsEntity.kt`**: entity in Room db.
+- - **`offline`**
+- **`TransactionsDao.kt`**: Room Dao for making database operations on it.
+- - **`TransactionsEntity.kt`**: entity in Room db.
 - **`TransactionDto.kt`**: Data Transfer Object for transactions.
 - **`TransactionsRepositoryImpl.kt`**: Repository implementation for handling data operations.
 - **`TransactionsResponse.kt`**: Model for the API response.
