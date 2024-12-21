@@ -6,5 +6,6 @@ data class TransactionsState(
     val isLoading: Boolean = false,
     val transactions: List<TransactionUi> = emptyList(),
     val numOfTransactions: Int = 0,
-    val error: String? = null
+    val error: String? = null,
+    val errorMessageRes: Int? = null
 )

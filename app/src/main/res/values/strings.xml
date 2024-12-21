@@ -5,4 +5,9 @@
     <string name="my_companies">شركاتي</string>
     <string name="policy">السياسات</string>
     <string name="num_of_transactions">عدد المعاملات الكلي</string>
+    <string name="bad_request">طلب خاطئ</string>
+    <string name="unauthorized">غير مصرح</string>
+    <string name="forbidden">ممنوع</string>
+    <string name="not_found">غير موجود</string>
+    <string name="unknown_error">خطأ غير معروف</string>
 </resources>

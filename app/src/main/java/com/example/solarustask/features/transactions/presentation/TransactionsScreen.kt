@@ -17,6 +17,7 @@ import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.solarustask.R
 import com.example.solarustask.core.presentation.components.ErrorScreen
 import com.example.solarustask.core.presentation.components.LoadingScreen
 import com.example.solarustask.features.transactions.presentation.components.TransactionsList
@@ -66,7 +67,7 @@ fun TransactionsScreen(
 
         }else if (state.error != null) {
             ErrorScreen(
-                message = state.error,
+                messageRes = state.errorMessageRes?: R.string.unknown_error,
                 onRetry = {
                     onEvent(TransactionsEvents.OnRetry)
                 }

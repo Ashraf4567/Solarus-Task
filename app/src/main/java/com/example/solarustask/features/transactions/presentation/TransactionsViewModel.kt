@@ -3,6 +3,7 @@ package com.example.solarustask.features.transactions.presentation
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.solarustask.core.data.networking.Resource
+import com.example.solarustask.core.data.networking.errorCodeToStringRes
 import com.example.solarustask.features.transactions.domain.TransactionsRepository
 import com.example.solarustask.features.transactions.presentation.model.toUi
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -65,6 +66,7 @@ class TransactionsViewModel @Inject constructor(
                             _state.update {
                                 it.copy(
                                     error = res.serverError.serverMessage,
+                                    errorMessageRes = errorCodeToStringRes(res.serverError.statusCode),
                                     isLoading = false
                                 )
                             }
@@ -77,7 +79,9 @@ class TransactionsViewModel @Inject constructor(
                                         transaction.toUi()
                                     },
                                     numOfTransactions = res.data.numOfTotalTrxs,
-                                    isLoading = false
+                                    isLoading = false,
+                                    error = null,
+                                    errorMessageRes = null
                                 )
                             }
                         }
